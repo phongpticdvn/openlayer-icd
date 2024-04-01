@@ -2,7 +2,7 @@ import { DarkmodeButton } from "@/utilities/darkmode_button"
 
 export const Header = () => {
   return (
-    <header className="bg-red-500 dark:bg-green-500">
+    <header className="">
       Header of Users
       <DarkmodeButton />
       hehe
