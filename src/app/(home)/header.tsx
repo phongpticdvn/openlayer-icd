@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export const Header = () => {
   return (
-    <header className="flex flex-row w-full h-[100px] justify-around items-center border-b-2 border-gray-900">
+    <header className="flex flex-row w-full h-24 justify-around items-center border-b-2 border-gray-900">
       <Logo></Logo>
       <div className="flex flex-row gap-10">
         <Link className="hover:text-blue-800 font-semibold text-xl" href="/">Home</Link>
