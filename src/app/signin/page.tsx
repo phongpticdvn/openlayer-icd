@@ -40,10 +40,6 @@ export default function SignInSide() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     let redirectPath: string | null =  null
-    // console.log({
-    //   email: data.get('email'),
-    //   password: data.get('password'),
-    // });
 
     try {
       const response = await AuthApi.signin({
