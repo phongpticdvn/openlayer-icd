@@ -44,21 +44,16 @@ export default function SignupSide() {
   const router = useRouter()
 
   const onSubmit = async (data: any) => {
-    console.log(data)
-    // event.preventDefault();
-    // const data = new FormData(event.currentTarget);
-    // let redirectPath: string | null =  null
-
-    // try {
-    //   const response = await AuthApi.signin({
-    //     email: data.get('email'),
-    //     password: data.get('password'),
-    //   });
-    //   console.log(response)
-    //   router.push('/users')
-    // } catch (error) {
-    //   console.error(error)
-    // }
+    try {
+      const response = await AuthApi.signup({
+        email: data.email,
+        password: data.password,
+      });
+      console.log(response)
+      router.push('/users')
+    } catch (error) {
+      console.error(error)
+    }
   };
 
   return (
