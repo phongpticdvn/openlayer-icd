@@ -14,11 +14,12 @@ export default function Users() {
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'email', headerName: 'Email', width: 200 },
-    { field: 'name', headerName: 'Name', width: 200 },
-    { field: 'phone', headerName: 'Phone', width: 200 },
-    { field: 'createdAt', headerName: 'Created At', width: 200 },
+    // { field: 'name', headerName: 'Name', width: 200 },
+    // { field: 'phone', headerName: 'Phone', width: 200 },
+    // { field: 'createdAt', headerName: 'Created At', width: 200 },
   ];
   const getUsers = async () => {
+    console.log('wwwwwwwwwwwwwwwwwwwwwwwwww')
     try {
       const response = await UsersApi.index();
       setUsers(response.data)
@@ -28,7 +29,6 @@ export default function Users() {
   }
   useEffect(() => {
     getUsers()
-    console.log(users)
   }, [])
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
